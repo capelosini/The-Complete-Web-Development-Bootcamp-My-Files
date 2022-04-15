@@ -1,0 +1,11 @@
+<%- include('navbar'); -%>
+    <form action="/newitem" method="POST" class="bg-dark text-light">
+        <label>Name of Item</label>
+        <input type="text" name="name">
+        <p></p>
+        <label>Content of Item</label>
+        <textarea name="content"></textarea>
+        <button type="submit" class="btn btn-outline-primary">Send</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Blog</title>
+</head>
+<body>
+    <nav class="nav navbar bg-primary">
+        <h1 class="">Blog</h1>
+        <ul>
+            <li class="nav-link">
+                <a class="btn btn-outline-warning" href="/newitem">New Item</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="day">
+        <h1>Day 1</h1>
+        <h2><%= day1 %></h2><a href="day1" class="nav-link">Read More</a>
+    </div>
+    <div class="day">
+        <h1>Day 2</h1>
+        <h2><%= day2 %></h2><a href="day2" class="nav-link">Read More</a>
+    </div>
+    <% for(var i = 2; i < Object.keys(daystexts).length; i++){ %>
+        <% var dayname = Object.keys(daystexts) %>
+        <% dayname = dayname[i] %>
+        <% var content = daystexts[dayname] %>
+        <div class="day">
+            <h1><%= dayname %></h1>
+            <h2><%= content.substring(0, 70) %></h2><a href=<%= dayname.replaceAll(" ", "") %> class="nav-link">Read More</a>
+        </div>
+    <% } %>
+</body>
+</html>

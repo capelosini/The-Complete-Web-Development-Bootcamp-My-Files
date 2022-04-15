@@ -1,0 +1,4 @@
+modulo node 'https' tem como payload o write e tem que usar o 'JSON.stringfy()' para funcionar como payload, o
+headers pode ser definido por um dict de configuração que tem como nome headers e um valor de dict,
+pode ser definido o tipo de request com o method no dict de configuração, body parser serve para pegar os valores do post request
+dado pelo usuario.
